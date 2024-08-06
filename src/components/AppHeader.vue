@@ -1,6 +1,6 @@
 <template>
-  <header class="bg-blue-500 text-white p-4">
-    <h1 class="text-3xl">Traffic accident simulation system</h1>
+  <header class="bg-gray-400 p-4 text-center">
+    <h1 class="text-2xl">Traffic Accident Simulation System</h1>
   </header>
 </template>
 

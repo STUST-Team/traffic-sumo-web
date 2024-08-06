@@ -4,7 +4,7 @@ import Practice from "./Practice/phonePractice.js";
 
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWeHistory(process.env.BASE_URL),
     routes: [...Practice]
 });
 
