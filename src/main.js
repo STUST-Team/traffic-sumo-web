@@ -1,9 +1,9 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router';
-//import store from './store';
-import './assets/tailwind.css'
-createApp(App).mount('#app')
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router' // 导入 router
+
+createApp(App).use(router).mount('#app') // 使用 router
+
 
 const app = createApp(App);
 

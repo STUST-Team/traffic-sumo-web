@@ -28,9 +28,15 @@
   </div>
 </template>
 
+
 <script>
 export default {
   name: 'App',
+  methods: {
+    goToNextPage() {
+      this.$router.push('/next-page'); // 使用 Vue Router 的 push 方法跳转页面
+    }
+  },
   data() {
     return {
       accidentLocations: []
@@ -46,6 +52,7 @@ export default {
         console.error('Error loading accident locations data:', error);
       });
   }
+  
 }
 </script>
 
