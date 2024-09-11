@@ -1,26 +1,15 @@
 <template>
-    <div>
-      <h2>Accident List</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>District</th>
-            <th>Location</th>
-            <th>Deaths</th>
-            <th>Injuries</th>
-            <th>Incidents</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="accident in accidents" :key="accident.id">
-            <td>{{ accident.district }}</td>
-            <td>{{ accident.location }}</td>
-            <td>{{ accident.deaths }}</td>
-            <td>{{ accident.injuries }}</td>
-            <td>{{ accident.incidents }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="accident-list">
+      <h2 class="title">Accident List</h2>
+      <div class="accident-card" v-for="accident in accidents" :key="accident.id">
+        <div class="accident-info">
+          <div class="info-item"><strong>District:</strong> {{ accident.district }}</div>
+          <div class="info-item"><strong>Location:</strong> {{ accident.location }}</div>
+          <div class="info-item"><strong>Deaths:</strong> {{ accident.deaths }}</div>
+          <div class="info-item"><strong>Injuries:</strong> {{ accident.injuries }}</div>
+          <div class="info-item"><strong>Incidents:</strong> {{ accident.incidents }}</div>
+        </div>
+      </div>
     </div>
   </template>
   
@@ -47,15 +36,35 @@
   </script>
   
   <style scoped>
-  table {
-    width: 100%;
-    border-collapse: collapse;
+  .accident-list {
+    padding: 16px;
   }
-  th, td {
+  
+  .title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 16px;
+  }
+  
+  .accident-card {
+    background-color: #fff;
     border: 1px solid #ddd;
-    padding: 8px;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  th {
-    background-color: #f2f2f2;
+  
+  .accident-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-item {
+    margin-bottom: 8px;
+  }
+  
+  .info-item strong {
+    color: #333;
   }
   </style>
