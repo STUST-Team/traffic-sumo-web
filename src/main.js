@@ -1,17 +1,20 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router' // 导入 router
+import { createApp } from 'vue';
+import App from './App.vue';
+import { createRouter, createMemoryHistory } from 'vue-router';
+import HomePage from './components/HomePage.vue';
+import NextPage from './components/NextPage.vue';
 
-createApp(App).use(router).mount('#app') // 使用 router
 
+const routes = [
+  { path: '/', component: HomePage },
+  { path: '/next-page', component: NextPage }
+];
+
+const router = createRouter({
+    history: createMemoryHistory(),
+  routes
+});
 
 const app = createApp(App);
-
 app.use(router);
-//    .use(store);
-
-app.mount('#app')
-
-
-
-
+app.mount('#app');

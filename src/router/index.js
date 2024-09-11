@@ -1,24 +1,22 @@
-// src/router/index.js
-
 import { createRouter, createWebHistory } from 'vue-router'
-import NextPage from '../views/NextPage.vue' // 导入你即将写的下一页面组件
-import HomeView from '../views/HomeView.vue'
+import HomePage from '../components/HomePage.vue'
+import NextPage from '../components/NextPage.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'HomeView',
-    component: HomeView
+    name: 'HomePage',
+    component: HomePage
   },
   {
     path: '/next-page',
     name: 'NextPage',
-    component: NextPage // 配置下一页面的路由
+    component: NextPage // 使用靜態導入
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
