@@ -15,7 +15,7 @@ const routes = [
     component: NextPage
   },
   {
-    path: '/map-page',
+    path: '/map',
     name: 'MapPage',
     component: MapPage
   }

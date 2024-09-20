@@ -1,8 +1,10 @@
 <template>
-    <div id="map-page" class="min-h-screen flex flex-col items-center justify-start bg-[#f6f8d9] p-4" style="width: 360px; height: 640px;">
+    <div id="map" class="min-h-screen flex flex-col items-center bg-[#f6f8d9] p-4" style="width: 360px; height: 640px; position: relative;">
       <header class="w-full flex justify-between items-center mb-6">
-        <button class="text-gray-500 ml-auto">☰</button>
+        <h1 class="text-lg font-bold text-yellow-800 text-center flex-grow">Traffic Accident Simulation System</h1>
+        <button class="text-gray-500" style="position: absolute; right: 10px;">☰</button>
       </header>
+      
       <main class="flex-1 w-full flex flex-col items-center justify-center mt-10">
         <h1 class="text-2xl font-semibold text-yellow-800 text-center mb-8">Map Page</h1>
         <!-- Map content goes here -->
@@ -22,7 +24,7 @@
   <style scoped>
   button.text-gray-500 {
     position: absolute;
-    right: 0;
+    right: 10px;
   }
   
   section {
