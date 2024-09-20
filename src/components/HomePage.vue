@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="min-h-screen flex flex-col items-center bg-[#f6f8d9] p-4">
+  <div id="home" class="min-h-screen flex flex-col items-center bg-[#f6f8d9] p-4" style="width: 360px; height: 640px;">
     <header class="w-full flex justify-between items-center mb-6">
       <h1 class="text-lg font-bold text-yellow-800 text-center flex-grow">Traffic Accident Simulation System</h1>
       <button class="text-gray-500 ml-auto">☰</button>
@@ -10,7 +10,9 @@
       </section>
       <AccidentList />
     </main>
-    <button @click="$router.push('/next-page')" class="bg-yellow-600 text-white px-4 py-2 rounded-full mt-4">GET START</button>
+    <section class="mt-8">
+      <button @click="$router.push('/next-page')" class="bg-yellow-600 text-white px-4 py-2 rounded-full mt-4">GET START</button>
+    </section>
   </div>
 </template>
 
@@ -22,17 +24,10 @@ export default {
   components: {
     AccidentList
   }
-};
+}
 </script>
 
 <style scoped>
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 button.text-gray-500 {
   position: absolute;
   right: 0;
