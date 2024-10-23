@@ -1,71 +1,83 @@
 <template>
-  <div id="home" class="min-h-screen flex flex-col items-center bg-[#f6f8d9] p-4" style="width: 360px; height: 640px; position: relative;">
+  <div id="next-page" class="min-h-screen flex flex-col items-center justify-start bg-yellow-100 p-4" style="width: 360px; height: 640px; position: relative;">
+    <!-- Navbar -->
     <header class="w-full flex justify-between items-center mb-6">
-      <h1 class="text-lg font-bold text-yellow-800 text-center flex-grow">Traffic Accident Simulation System</h1>
       <button class="text-gray-500" style="position: absolute; right: 10px;" @click="toggleMenu">☰</button>
     </header>
 
     <!-- Menu -->
     <div v-if="menuVisible" class="absolute top-0 right-0 bg-white shadow-lg w-1/2 h-full z-50 p-4 transition-transform transform" :class="{'translate-x-0': menuVisible, 'translate-x-full': !menuVisible}">
+      <button class="absolute top-4 right-4 text-gray-500 mb-4" @click="toggleMenu">✖</button>
       <ul class="space-y-4">
-        <li><router-link to="/simulate">模擬交通</router-link></li>
-        <li><router-link to="/analysis">交通分析</router-link></li>
-        <li><router-link to="/introduction">介紹</router-link></li>
-        <li><router-link to="/references">參考</router-link></li>
+        <li class="bg-yellow-600 text-white py-2 px-4 rounded-lg"><router-link to="/simulate">模擬交通</router-link></li>
+        <li class="bg-yellow-600 text-white py-2 px-4 rounded-lg"><router-link to="/analysis">交通分析</router-link></li>
+        <li class="bg-yellow-600 text-white py-2 px-4 rounded-lg"><router-link to="/introduction">介紹</router-link></li>
+        <li class="bg-yellow-600 text-white py-2 px-4 rounded-lg"><router-link to="/references">參考</router-link></li>
       </ul>
     </div>
 
     <!-- Title Section -->
-    <main class="flex-1 w-full flex flex-col items-center">
+    <main class="flex-1 w-full flex flex-col items-center justify-center mt-10">
+      <h1 class="text-2xl font-semibold text-yellow-800 text-center mb-8">Traffic Accident Simulation System</h1>
 
       <!-- Accident List Section -->
       <section class="space-y-4 w-full max-w-xs">
         <!-- Northern Region -->
         <h2 class="text-xl font-semibold text-yellow-800">北部</h2>
-        <ul>
-          <router-link to="/map">臺北市</router-link> 
-          <router-link to="/map">新北市</router-link> 
-          <router-link to="/map">基隆市</router-link> 
-          <router-link to="/map">新竹市</router-link> 
-          <router-link to="/map">桃園市</router-link> 
-          <router-link to="/map">新竹縣</router-link> 
-          <router-link to="/map">宜蘭縣</router-link>
-        </ul>
+        <div class="overflow-x-auto">
+          <ul class="flex space-x-2">
+            <li><router-link to="/map" class="btn">臺北市</router-link></li>
+            <li><router-link to="/map" class="btn">新北市</router-link></li>
+            <li><router-link to="/map" class="btn">基隆市</router-link></li>
+            <li><router-link to="/map" class="btn">新竹市</router-link></li>
+            <li><router-link to="/map" class="btn">桃園市</router-link></li>
+            <li><router-link to="/map" class="btn">新竹縣</router-link></li>
+            <li><router-link to="/map" class="btn">宜蘭縣</router-link></li>
+          </ul>
+        </div>
 
         <!-- Central Region -->
         <h2 class="text-xl font-semibold text-yellow-800">中部</h2>
-        <ul>
-          <router-link to="/map">臺中市</router-link> 
-          <router-link to="/map">苗栗縣</router-link> 
-          <router-link to="/map">彰化縣</router-link> 
-          <router-link to="/map">南投縣</router-link> 
-          <router-link to="/map">雲林縣</router-link>
-        </ul>
+        <div class="overflow-x-auto">
+          <ul class="flex space-x-2">
+            <li><router-link to="/map" class="btn">臺中市</router-link></li>
+            <li><router-link to="/map" class="btn">苗栗縣</router-link></li>
+            <li><router-link to="/map" class="btn">彰化縣</router-link></li>
+            <li><router-link to="/map" class="btn">南投縣</router-link></li>
+            <li><router-link to="/map" class="btn">雲林縣</router-link></li>
+          </ul>
+        </div>
 
         <!-- Southern Region -->
         <h2 class="text-xl font-semibold text-yellow-800">南部</h2>
-        <ul>
-          <router-link to="/map">高雄市</router-link> 
-          <router-link to="/map">臺南市</router-link> 
-          <router-link to="/map">嘉義市</router-link> 
-          <router-link to="/map">嘉義縣</router-link> 
-          <router-link to="/map">屏東縣</router-link> 
-        </ul>
+        <div class="overflow-x-auto">
+          <ul class="flex space-x-2">
+            <li><router-link to="/map" class="btn">高雄市</router-link></li>
+            <li><router-link to="/map" class="btn">臺南市</router-link></li>
+            <li><router-link to="/map" class="btn">嘉義市</router-link></li>
+            <li><router-link to="/map" class="btn">嘉義縣</router-link></li>
+            <li><router-link to="/map" class="btn">屏東縣</router-link></li>
+          </ul>
+        </div>
 
         <!-- Eastern Region -->
         <h2 class="text-xl font-semibold text-yellow-800">東部</h2>
-        <ul>
-          <router-link to="/map">花蓮縣</router-link> 
-          <router-link to="/map">臺東縣</router-link>
-        </ul>
+        <div class="overflow-x-auto">
+          <ul class="flex space-x-2">
+            <li><router-link to="/map" class="btn">花蓮縣</router-link></li>
+            <li><router-link to="/map" class="btn">臺東縣</router-link></li>
+          </ul>
+        </div>
 
         <!-- Islands -->
         <h2 class="text-xl font-semibold text-yellow-800">離島</h2>
-        <ul>
-          <router-link to="/map">澎湖縣</router-link> 
-          <router-link to="/map">金門縣</router-link> 
-          <router-link to="/map">連江縣</router-link>
-        </ul>
+        <div class="overflow-x-auto">
+          <ul class="flex space-x-2">
+            <li><router-link to="/map" class="btn">澎湖縣</router-link></li>
+            <li><router-link to="/map" class="btn">金門縣</router-link></li>
+            <li><router-link to="/map" class="btn">連江縣</router-link></li>
+          </ul>
+        </div>
       </section>
 
       <!-- Back to HomePage Button -->
@@ -97,20 +109,28 @@ button.text-gray-500 {
   right: 10px;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-button.bg-yellow-600 {
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .menu {
   transition: transform 0.3s ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.btn {
+  background-color: #f59e0b; /* 深黃色 */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
 }
 </style>
