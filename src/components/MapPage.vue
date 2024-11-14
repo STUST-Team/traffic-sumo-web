@@ -1,7 +1,7 @@
 <template>
-  <div id="home" class="min-h-screen flex flex-col items-center bg-gray-100 p-4" style="width: 360px; height: 640px; position: relative;">
+  <div id="map-page" class="min-h-screen flex flex-col items-center justify-start bg-gray-100 p-4" style="width: 360px; height: 640px; position: relative;">
+    <!-- Navbar -->
     <header class="w-full flex justify-between items-center mb-6">
-      <h1 class="text-lg font-bold text-black text-center flex-grow">Traffic Accident Simulation System</h1>
       <button class="text-gray-500" style="position: absolute; right: 10px;" @click="toggleMenu">☰</button>
     </header>
 
@@ -16,23 +16,18 @@
       </ul>
     </div>
 
-    <main class="flex-1 w-full flex flex-col items-center">
-      <AccidentList />
+    <main class="flex-1 w-full flex flex-col items-center justify-center mt-10">
+      <h1 class="text-2xl font-semibold text-black text-center mb-8">Map Page</h1>
+      <!-- Map content goes here -->
     </main>
     <section class="mt-8">
-      <button @click="$router.push('/next-page')" class="bg-gray-800 text-white px-4 py-2 rounded-full mt-4">GET START</button>
+      <button @click="$router.push('/next-page')" class="bg-gray-800 text-white px-4 py-2 rounded-full mt-4">返回NextPage</button>
     </section>
   </div>
 </template>
 
 <script>
-import AccidentList from './AccidentList.vue';
-
 export default {
-  name: 'HomePage',
-  components: {
-    AccidentList
-  },
   data() {
     return {
       menuVisible: false
@@ -75,27 +70,5 @@ li a {
   text-align: center;
   white-space: nowrap;
   display: inline-block;
-}
-
-.text-base {
-  font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-  .text-base {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .text-base {
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .text-base {
-    font-size: 1.25rem;
-  }
 }
 </style>
