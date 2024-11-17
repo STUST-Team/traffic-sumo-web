@@ -11,7 +11,7 @@
         <ul class="space-y-4">
           <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/">首頁</router-link></li>
           <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/next-page">縣市</router-link></li>
-          <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/introduction">介紹</router-link></li>
+          <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/introduce-page">介紹</router-link></li>
           <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/references">參考</router-link></li>
         </ul>
       </div>
@@ -29,6 +29,7 @@
   
   <script>
   export default {
+    name: 'IntroducePage',
     data() {
       return {
         menuVisible: false

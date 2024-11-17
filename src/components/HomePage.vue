@@ -11,7 +11,7 @@
       <ul class="space-y-4">
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/">首頁</router-link></li>
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/next-page">縣市</router-link></li>
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/introduction">介紹</router-link></li>
+        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/introduce-page">介紹</router-link></li>
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/references">參考</router-link></li>
       </ul>
     </div>
@@ -75,27 +75,5 @@ li a {
   text-align: center;
   white-space: nowrap;
   display: inline-block;
-}
-
-.text-base {
-  font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-  .text-base {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .text-base {
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .text-base {
-    font-size: 1.25rem;
-  }
 }
 </style>
