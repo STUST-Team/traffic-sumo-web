@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../components/HomePage.vue';
 import NextPage from '../components/NextPage.vue';
 import MapPage from '../components/MapPage.vue';
-import Introduce from '../components/Introduce.vue';
+import IntroducePage from '../components/IntroducePage.vue';
+import ReferencesPage from '../components/ReferencesPage.vue';
 
 const routes = [
   {
@@ -21,9 +22,14 @@ const routes = [
     component: MapPage
   },
   {
-    path: '/introduction',
-    name: 'Introduce',
-    component: Introduce
+    path: '/introduce-page',
+    name: 'IntroducePage',
+    component: IntroducePage
+  },
+  {
+    path: '/references-page',
+    name: 'ReferencesPage',
+    component: ReferencesPage
   }
 ];
 
