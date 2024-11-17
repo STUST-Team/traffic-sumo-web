@@ -3,6 +3,7 @@ import HomePage from '../components/HomePage.vue';
 import NextPage from '../components/NextPage.vue';
 import MapPage from '../components/MapPage.vue';
 import IntroducePage from '../components/IntroducePage.vue';
+import ReferencesPage from '../components/ReferencesPage.vue';
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/introduce-page',
     name: 'IntroducePage',
     component: IntroducePage
+  },
+  {
+    path: '/references-page',
+    name: 'ReferencesPage',
+    component: ReferencesPage
   }
 ];
 

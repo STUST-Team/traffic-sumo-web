@@ -1,5 +1,5 @@
 <template>
-    <div id="introduce-page" class="min-h-screen flex flex-col items-center justify-start bg-gray-100 p-4" style="width: 360px; height: 640px; position: relative;">
+    <div id="references-page" class="min-h-screen flex flex-col items-center justify-start bg-gray-100 p-4" style="width: 360px; height: 640px; position: relative;">
       <!-- Navbar -->
       <header class="w-full flex justify-between items-center mb-6">
         <button class="text-gray-500" style="position: absolute; right: 10px;" @click="toggleMenu">☰</button>
@@ -18,8 +18,8 @@
   
       <!-- Title Section -->
       <main class="flex-1 w-full flex flex-col items-center justify-center mt-10">
-        <h1 class="text-2xl font-semibold text-black text-center mb-8">Introduce Page</h1>
-        <!-- Introduce content goes here -->
+        <h1 class="text-2xl font-semibold text-black text-center mb-8">References Page</h1>
+        <!-- References content goes here -->
       </main>
       <section class="mt-8">
         <button @click="$router.push('/next-page')" class="bg-gray-800 text-white px-4 py-2 rounded-full mt-4">返回NextPage</button>
@@ -29,7 +29,7 @@
   
   <script>
   export default {
-    name: 'IntroducePage',
+    name: 'ReferencesPage',
     data() {
       return {
         menuVisible: false
