@@ -1,27 +1,26 @@
 <template>
-  <div id="next-page" class="min-h-screen flex flex-col items-center justify-start bg-gray-100 p-4" style="width: 360px; height: 640px; position: relative;">
-    <!-- Navbar -->
+  <div id="home" class="min-h-screen flex flex-col items-center bg-gray-100 p-4">
     <header class="w-full flex justify-between items-center mb-6">
+      <h1 class="text-lg lg:text-3xl font-bold text-black text-center flex-grow">Traffic Accident Simulation System</h1>
       <button class="text-gray-500" style="position: absolute; right: 10px;" @click="toggleMenu">☰</button>
     </header>
 
     <!-- Menu -->
-    <div v-if="menuVisible" class="absolute top-0 right-0 bg-white shadow-lg w-1/2 h-full z-50 p-4 transition-transform transform" :class="{'translate-x-0': menuVisible, 'translate-x-full': !menuVisible}">
+    <div v-if="menuVisible" class="absolute top-0 right-0 bg-[#f7fafcd2] shadow-lg w-1/2 h-full z-50 p-4 transition-transform transform" :class="{'translate-x-0': menuVisible, 'translate-x-full': !menuVisible}">
       <button class="absolute top-4 right-4 text-gray-500 mb-4" @click="toggleMenu">✖</button>
-      <ul class="space-y-4">
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/">首頁</router-link></li>
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/next-page">縣市</router-link></li>
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/introduce-page">介紹</router-link></li>
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/references-page">參考</router-link></li>
+      <ul class="space-y-4 flex flex-col">
+        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/">首頁</router-link></li>
+        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/next-page">縣市</router-link></li>
+        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/introduce-page">介紹</router-link></li>
+        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/references-page">參考</router-link></li>
       </ul>
     </div>
 
     <!-- Title Section -->
     <main class="flex-1 w-full flex flex-col items-center justify-center mt-10">
-      <h1 class="text-2xl font-semibold text-black text-center mb-8">Traffic Accident Simulation System</h1>
 
       <!-- Accident List Section -->
-      <section class="space-y-4 w-full max-w-xs">
+      <section class="space-y-4 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl">
         <!-- Northern Region -->
         <h2 class="text-xl font-semibold text-black">北部</h2>
         <div class="overflow-x-auto">
@@ -104,6 +103,12 @@ export default {
 </script>
 
 <style scoped>
+html, body, #app, #next-page {
+  height: 100%;
+  margin: 0;
+  background-color: #f7fafc; /* 淺灰色 */
+}
+
 button.text-gray-500 {
   position: absolute;
   right: 10px;
@@ -144,25 +149,45 @@ li a {
   display: inline-block;
 }
 
-.text-base {
-  font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-  .text-base {
-    font-size: 0.875rem;
+@media (max-width: 640px) {
+  .max-w-xs {
+    max-width: 100%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .text-base {
-    font-size: 1.125rem;
+@media (min-width: 640px) {
+  .max-w-xs {
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .max-w-sm {
+    max-width: 24rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .text-base {
-    font-size: 1.25rem;
+  .max-w-md {
+    max-width: 28rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .max-w-lg {
+    max-width: 32rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .max-w-xl {
+    max-width: 36rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .max-w-2xl {
+    max-width: 42rem;
   }
 }
 </style>
