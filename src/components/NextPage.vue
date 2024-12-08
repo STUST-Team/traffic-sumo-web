@@ -1,7 +1,7 @@
 <template>
-  <div id="home" class="min-h-screen flex flex-col items-center bg-gray-100 p-4">
+  <div id="next-page" class="min-h-screen flex flex-col items-center bg-gray-100 p-4">
     <header class="w-full flex justify-between items-center mb-6">
-      <h1 class="text-lg lg:text-3xl font-bold text-black text-center flex-grow">Traffic Accident Simulation System</h1>
+
       <button class="text-gray-500" style="position: absolute; right: 10px;" @click="toggleMenu">☰</button>
     </header>
 
@@ -93,6 +93,9 @@ export default {
     return {
       menuVisible: false
     };
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   },
   methods: {
     toggleMenu() {
