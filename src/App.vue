@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-full">
+  <div id="app" class="min-h-screen bg-gray-100">
     <router-view />
   </div>
 </template>
@@ -14,5 +14,6 @@ export default {
 html, body, #app {
   height: 100%;
   margin: 0;
+  background-color: #f7fafc; /* 淺灰色 */
 }
 </style>
