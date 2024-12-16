@@ -10,9 +10,8 @@
       <button class="absolute top-4 right-4 text-gray-500 mb-4" @click="toggleMenu">✖</button>
       <ul class="space-y-4 flex flex-col">
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/">首頁</router-link></li>
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/next-page">縣市</router-link></li>
+        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/map">數據查詢</router-link></li>
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/introduce-page">介紹</router-link></li>
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/references-page">參考</router-link></li>
       </ul>
     </div>
 
@@ -75,6 +74,14 @@
             <li><router-link to="/map" class="btn">澎湖縣</router-link></li>
             <li><router-link to="/map" class="btn">金門縣</router-link></li>
             <li><router-link to="/map" class="btn">連江縣</router-link></li>
+          </ul>
+        </div>
+
+        <h2 class="text-xl font-semibold text-black">其他</h2>
+        <div class="overflow-x-auto">
+          <ul class="flex space-x-2">
+            <li><router-link to="/map" class="btn">國 道</router-link></li>
+            <li><router-link to="/map" class="btn">其 他</router-link></li>
           </ul>
         </div>
       </section>
