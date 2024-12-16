@@ -9,9 +9,8 @@
       <button class="absolute top-4 right-4 text-gray-500 mb-4" @click="toggleMenu">✖</button>
       <ul class="space-y-4 flex flex-col">
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/">首頁</router-link></li>
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/next-page">縣市</router-link></li>
+        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/map">數據查詢</router-link></li>
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/introduce-page">介紹</router-link></li>
-        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/references-page">參考</router-link></li>
       </ul>
     </div>
 
