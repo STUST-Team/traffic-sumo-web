@@ -5,13 +5,15 @@ import HomePage from './components/HomePage.vue';
 import NextPage from './components/NextPage.vue';
 import MapPage from './components/MapPage.vue';
 import IntroducePage from './components/IntroducePage.vue';
+import ChartPage from './components/ChartPage.vue';
 import './assets/styles/tailwind.css';
 
 const routes = [
   { path: '/', component: HomePage },
   { path: '/next-page', component: NextPage },
   { path: '/map', component: MapPage },
-  { path: '/introduce-page', component: IntroducePage }
+  { path: '/introduce-page', component: IntroducePage },
+  { path: '/chart-page', component: ChartPage }
 ];
 
 const router = createRouter({

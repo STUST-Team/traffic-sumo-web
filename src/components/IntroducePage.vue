@@ -11,6 +11,7 @@
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/">首頁</router-link></li>
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/map">數據查詢</router-link></li>
         <li class="bg-gray-800 text-white py-2 px-4 rounded-lg w-auto"><router-link to="/introduce-page">介紹</router-link></li>
+        <li class="bg-gray-800 text-white py-2 px-4 rounded-lg"><router-link to="/chart-page">圖表分析</router-link></li>
       </ul>
     </div>
 
